@@ -28,7 +28,7 @@ namespace WindowsFormsApp5
         {
             label1.Text = $"NAME: {name}";
             label2.Text = $"AGE: {age}";
-            label3.Text = $"LANGUAGE: {lang}";
+            label3.Text = $"LANGUAGE:  {lang}";
             label4.Text = $"MARKS: {marks}";
 
         }

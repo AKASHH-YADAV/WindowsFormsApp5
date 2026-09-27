@@ -20,7 +20,7 @@ namespace WindowsFormsApp5
         private void Form1_Load(object sender, EventArgs e)
         {
             listBox1.Items.Add("C");
-            listBox1.Items.Add("C++");
+            listBox1.Items.Add("Java");
             listBox1.Items.Add("C#");
             listBox1.Items.Add("Python");
 
@@ -38,12 +38,33 @@ namespace WindowsFormsApp5
             {
                 MessageBox.Show("Enter complete detail");
             }
-            if(lang=="C")
+            else if(lang=="C")
             {
                 Form2 f2 = new Form2(name, age, lang);
                 this.Hide();
                 f2.ShowDialog();
             }
+            else if (lang == "Python")
+            {
+                //MessageBox.Show($"{name}");
+
+                Form4 f4 = new Form4(name, age, lang);
+                this.Hide();
+                f4.ShowDialog();
+            }
+            else if (lang == "Java")
+            {
+                Form5 f5 = new Form5(name, age, lang);
+                this.Hide();
+                f5.ShowDialog();
+            }
+            else if (lang == "C#")
+            {
+                Form6 f6 = new Form6(name,age,lang);
+                this.Hide();
+                f6.ShowDialog();
+            }
+
 
         }
     }

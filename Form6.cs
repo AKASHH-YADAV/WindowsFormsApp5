@@ -7,31 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp5
 {
-    public partial class Form4 : Form
+    public partial class Form6 : Form
     {
-        int marks = 0;
-        int age;
         string name, lang;
-        public Form4(string name, int age, string lang)
+        int age, marks;
+        public Form6(string name,int age,string lang)
         {
             InitializeComponent();
             this.name = name;
             this.age = age;
             this.lang = lang;
-
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked || radioButton2.Checked || radioButton3.Checked || radioButton4.Checked)
             {
-                if (radioButton2.Checked == true)
+                if (radioButton1.Checked == true)
                 {
                     marks += 5;
                 }
@@ -49,7 +44,7 @@ namespace WindowsFormsApp5
             }
             if (radioButton5.Checked || radioButton6.Checked || radioButton7.Checked || radioButton8.Checked)
             {
-                if (radioButton5.Checked == true)
+                if (radioButton8.Checked == true)
                 {
                     marks += 5;
                 }
@@ -66,7 +61,7 @@ namespace WindowsFormsApp5
             }
             if (radioButton9.Checked || radioButton10.Checked || radioButton11.Checked || radioButton12.Checked)
             {
-                if (radioButton11.Checked == true)
+                if (radioButton10.Checked == true)
                 {
                     marks += 5;
                 }
@@ -113,8 +108,8 @@ namespace WindowsFormsApp5
                 radioButton20.Enabled = false;
             }
 
-           Form3 f3 = new Form3(name, age, lang, marks);
-          //  MessageBox.Show($"{name}");
+            Form3 f3 = new Form3(name, age, lang, marks);
+            //  MessageBox.Show($"{name}");
             this.Hide();
             f3.ShowDialog();
 

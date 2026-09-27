@@ -7,31 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp5
 {
-    public partial class Form4 : Form
+    public partial class Form5 : Form
     {
-        int marks = 0;
-        int age;
         string name, lang;
-        public Form4(string name, int age, string lang)
-        {
-            InitializeComponent();
-            this.name = name;
-            this.age = age;
-            this.lang = lang;
-
-            
-        }
+        int age, marks;
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked || radioButton2.Checked || radioButton3.Checked || radioButton4.Checked)
             {
-                if (radioButton2.Checked == true)
+                if (radioButton3.Checked == true)
                 {
                     marks += 5;
                 }
@@ -49,7 +37,7 @@ namespace WindowsFormsApp5
             }
             if (radioButton5.Checked || radioButton6.Checked || radioButton7.Checked || radioButton8.Checked)
             {
-                if (radioButton5.Checked == true)
+                if (radioButton6.Checked == true)
                 {
                     marks += 5;
                 }
@@ -66,7 +54,7 @@ namespace WindowsFormsApp5
             }
             if (radioButton9.Checked || radioButton10.Checked || radioButton11.Checked || radioButton12.Checked)
             {
-                if (radioButton11.Checked == true)
+                if (radioButton9.Checked == true)
                 {
                     marks += 5;
                 }
@@ -113,10 +101,23 @@ namespace WindowsFormsApp5
                 radioButton20.Enabled = false;
             }
 
-           Form3 f3 = new Form3(name, age, lang, marks);
-          //  MessageBox.Show($"{name}");
+            Form3 f3 = new Form3(name, age, lang, marks);
+            //  MessageBox.Show($"{name}");
             this.Hide();
             f3.ShowDialog();
+
+        }
+
+        public Form5(string name, int age,string lang)
+        {
+            this.name = name;
+            this.age = age;
+            this.lang = lang;
+            InitializeComponent();
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
 
         }
     }
